@@ -3,6 +3,7 @@ const app = express();
 
 // routes
 const index = require('./routes/index');
+const settings = require('./routes/settings');
 const user = require('./routes/user');
 
 app.use((req, res, next) => {
@@ -12,5 +13,6 @@ app.use((req, res, next) => {
 
 app.use('/', index);
 app.use('/user', user);
+app.use('/settings', settings);
 
 app.listen(3000, () => console.log('Server is up on 3000 port. 🚀🚀'));

@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-	res.json(req.query);
+	res.end('Settings - Home');
 });
 
-router.get('/detail', (req, res) => {
-	res.end('user - detail');
+router.get('/general', (req, res) => {
+	res.end('Settings - General');
 });
 
 module.exports = router;
