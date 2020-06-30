@@ -1,0 +1,1 @@
+# turk-patent-node-egitimi
