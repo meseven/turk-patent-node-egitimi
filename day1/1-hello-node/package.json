@@ -1,0 +1,17 @@
+{
+	"name": "1-hello-node",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node app.js",
+		"start:dev": "node app.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"random-words": "^1.1.1",
+		"slugify": "^1.4.4"
+	}
+}
