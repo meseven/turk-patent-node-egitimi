@@ -1,1 +1,2 @@
-alert('Merhaba');
+// alert('Merhaba');
+console.log('index');

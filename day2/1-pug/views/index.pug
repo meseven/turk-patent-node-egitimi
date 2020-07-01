@@ -1,43 +1,41 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
-    link(rel="stylesheet", href="/css/index.css")
-  body
-    include header
+extends layout 
 
-    - var title = "selam"
+block styles
+  link(rel="stylesheet", href="/css/index.css")
 
-    #container
+block content
+  - var title = "selam"
 
-      div Yaşım #{age}, ismim #{name}
+  #container
 
-      if name === 'Mehmet'
-        div name: #{name}
-      else
-        div name mehmet değil
+    div Yaşım #{age}, ismim #{name}
 
-      if isLogin
-        div Hoş geldiniz.
-      else
-        div Giriş yapın.
+    if name === 'Mehmet'
+      div name: #{name}
+    else
+      div name mehmet değil
 
-      h2 #{title}
+    if isLogin
+      div Hoş geldiniz.
+    else
+      div Giriş yapın.
 
-      ul
-        each val in friends
-          li #{val.id} - #{val.name}
+    h2 #{title}
 
-      h1 #{name}
-      p #{job}
-      p #{info.age}
-      br
-      img(src="https://picsum.photos/200/200")
-      .content
-        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci asperiores magni nesciunt odio iste aliquid mollitia nisi corrupti sunt rerum, veritatis dicta consequuntur libero id reprehenderit, qui neque dolorum laborum?
+    ul
+      each val in friends
+        li #{val.id} - #{val.name}
 
-      include footer
+    h1 #{name}
+    p #{job}
+    p #{info.age}
+    br
+    img(src="https://picsum.photos/200/200")
+    .content
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci asperiores magni nesciunt odio iste aliquid mollitia nisi corrupti sunt rerum, veritatis dicta consequuntur libero id reprehenderit, qui neque dolorum laborum?
 
+    //- include footer
+
+
+block javascripts
   script(src="/js/index.js")
