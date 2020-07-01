@@ -4,10 +4,20 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
+    link(rel="stylesheet", href="/css/index.css")
   body
     include header
 
+    - var title = "selam"
+
     #container
+
+      div Yaşım #{age}, ismim #{name}
+
+      if name === 'Mehmet'
+        div name: #{name}
+      else
+        div name mehmet değil
 
       if isLogin
         div Hoş geldiniz.
@@ -29,3 +39,5 @@ html(lang="en")
         | Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci asperiores magni nesciunt odio iste aliquid mollitia nisi corrupti sunt rerum, veritatis dicta consequuntur libero id reprehenderit, qui neque dolorum laborum?
 
       include footer
+
+  script(src="/js/index.js")
