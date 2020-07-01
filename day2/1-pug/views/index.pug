@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    include header
+
+    #container
+
+      if isLogin
+        div Hoş geldiniz.
+      else
+        div Giriş yapın.
+
+      h2 #{title}
+
+      ul
+        each val in friends
+          li #{val.id} - #{val.name}
+
+      h1 #{name}
+      p #{job}
+      p #{info.age}
+      br
+      img(src="https://picsum.photos/200/200")
+      .content
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci asperiores magni nesciunt odio iste aliquid mollitia nisi corrupti sunt rerum, veritatis dicta consequuntur libero id reprehenderit, qui neque dolorum laborum?
+
+      include footer
