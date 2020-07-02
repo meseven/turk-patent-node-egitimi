@@ -30,4 +30,23 @@ router.post('/', async (req, res) => {
 	}
 });
 
+router.put('/', async (req, res) => {
+	const update = await Book.findByIdAndUpdate(req.body._id, req.body, { new: true });
+	res.json(update);
+});
+
+router.delete('/:bookId', async (req, res) => {
+	const { bookId } = req.params;
+	if (!bookId) {
+		res.json({
+			error: {
+				message: 'Book id was not enter.',
+			},
+		});
+	}
+
+	const remove = await Book.findByIdAndDelete(req.params.bookId);
+	res.json(remove);
+});
+
 module.exports = router;
